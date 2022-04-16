@@ -6,11 +6,11 @@ services:
       context: app
       dockerfile: Dockerfile
     container_name: flask
-    image: acetime.com.br/python-flask-mongo
+    image: python:alpine3.15
     restart: unless-stopped
     environment:
       APP_ENV: "prod"
-      APP_DEBUG: "True"
+      APP_DEBUG: "False"
       APP_PORT: 5000
       MONGODB_DATABASE: pythonflaskdb
       MONGODB_USERNAME: pythonflaskuser
@@ -44,7 +44,7 @@ services:
     build:
       context: nginx
       dockerfile: Dockerfile
-    image: digitalocean.com/webserver:latest
+    image: nginx:stable-alpine
     container_name: webserver
     restart: unless-stopped
     environment:

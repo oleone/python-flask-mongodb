@@ -1,4 +1,4 @@
-FROM digitalocean.com/alpine:latest
+FROM nginx:stable-alpine
 
 LABEL MAINTAINER="Nome Sobrenome <example@domain.com>"
 
